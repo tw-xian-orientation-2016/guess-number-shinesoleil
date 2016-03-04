@@ -8,4 +8,10 @@ public class CompareNumberTest {
         CompareNumber cn = new CompareNumber();
         assertEquals("0A0B", cn.compare(1234, 5678));
     }
+
+    @Test
+    public void fourRightNumberButWrongPlace() {
+        CompareNumber cn = new CompareNumber();
+        assertEquals("0A4B", cn.compare(1234, 4321));
+    }
 }
