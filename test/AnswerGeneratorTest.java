@@ -14,7 +14,7 @@ public class AnswerGeneratorTest {
 
     AnswerGenerator answerGenerator = new AnswerGenerator(random);
 
-    assertThat(answerGenerator.generateAnswer(), is("1234"));
+    assertThat(answerGenerator.generate(), is("1234"));
   }
 
   @Test
@@ -24,6 +24,6 @@ public class AnswerGeneratorTest {
 
     AnswerGenerator answerGenerator = new AnswerGenerator(random);
 
-    assertThat(answerGenerator.generateAnswer(), is("1234"));
+    assertThat(answerGenerator.generate(), is("1234"));
   }
 }

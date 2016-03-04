@@ -7,7 +7,7 @@ public class AnswerGenerator {
     this.random = random;
   }
 
-  public String generateAnswer() {
+  public String generate() {
     String answer = "";
 
     while (answer.length() < 4) {
