@@ -1,7 +1,9 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 public class CompareNumberTest {
   CompareNumber cn;
@@ -13,16 +15,18 @@ public class CompareNumberTest {
 
   @Test
   public void noRightNumber() {
-    assertEquals("0A0B", cn.compare(1234, 5678));
+    assertThat(cn.compare("1234", "5678"), is("0A0B"));
   }
 
   @Test
   public void fourRightNumberButWrongPlace() {
-    assertEquals("0A4B", cn.compare(1234, 4321));
+
+    assertThat(cn.compare("1234", "4321"), is("0A4B"));
   }
 
   @Test
   public void fourNumberRightPlace() {
-    assertEquals("4A0B", cn.compare(1234, 1234));
+
+    assertThat(cn.compare("1234", "1234"), is("4A0B"));
   }
 }

@@ -1,20 +1,18 @@
 public class CompareNumber {
 
-  public String compare(int num, int inputNum) {
+  public String compare(String answer, String input) {
 
-    String numStr = Integer.toString(num);
-    String inputNumStr = Integer.toString(inputNum);
-    int countA = 0;
-    int countB = 0;
+    int A = 0;
+    int B = 0;
 
-    for (int i = 0; i < inputNumStr.length(); i++) {
-      if (numStr.charAt(i) == inputNumStr.charAt(i)) {
-        countA++;
-      } else if (numStr.indexOf(inputNumStr.charAt(i)) != -1) {
-        countB++;
+    for (int i = 0; i < input.length(); i++) {
+      if (answer.charAt(i) == input.charAt(i)) {
+        A++;
+      } else if (answer.indexOf(input.charAt(i)) != -1) {
+        B++;
       }
     }
 
-    return countA + "A" + countB + "B";
+    return A + "A" + B + "B";
   }
 }
