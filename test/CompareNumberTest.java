@@ -14,4 +14,10 @@ public class CompareNumberTest {
         CompareNumber cn = new CompareNumber();
         assertEquals("0A4B", cn.compare(1234, 4321));
     }
+
+    @Test
+    public void fourNumberRightPlace() {
+        CompareNumber cn = new CompareNumber();
+        assertEquals("4A0B", cn.compare(1234, 1234));
+    }
 }
